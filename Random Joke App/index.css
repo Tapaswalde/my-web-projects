@@ -1,0 +1,30 @@
+.joke-app{
+  min-height: 100vh;
+  background-color: #FFF3E0; /* Light Peach */
+  margin: 0;
+  padding: 0;
+}
+
+.emoji{
+    font-size: 7rem;
+}
+.joke-container{
+    height:70vh;
+}
+.generate-btn{
+    background-color: #FFBF00;
+    color:balck;
+    font-weight: 500;
+    border:none;
+    height: 3rem;
+    width:10rem;
+}
+#jokes{
+    color:#FFF3E0;
+    font-size: 1.5rem;
+}
+#punchline{
+    color:#FF6F61;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
