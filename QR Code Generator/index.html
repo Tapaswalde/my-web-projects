@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <input type="text" id="text" placeholder="Enter text or URL"/>
+        <div class="buttons">
+            <button id="generate">Generate QR</button>
+            <button id="download">Download</button>
+            <button id="copy">Copy Text</button>
+            <button id="themeToggle">🌙 Dark Mode</button>
+        </div>
+        <div id="qrcode" class="fade-in"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
