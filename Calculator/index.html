@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    #keysContainer{
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        min-width:400px;
+        max-width: 400px;
+        background-color: black;
+    }
+    .heading{
+        text-align: center;
+    }
+    .btns{
+        height:4rem;
+        width:6rem;   
+        margin:1rem;
+        border-radius:3rem;
+        font-weight: 900;
+    }
+    .display{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #userInput{
+        width: 60%;
+        height: 2rem;
+        margin-bottom: 1rem;
+    }
+</style>
+<body>
+    <h1 class="heading">Welcome !</h1>
+    <div class="container">
+        <div class="display">
+            <input  id="userInput" type="text">
+            <div id="keysContainer"></div>
+        </div>
+    </div>
+    <script>
+    const keysContainer = document.getElementById("keysContainer");
+const arr = ['AC', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', 'x', '/', '.', '='];
+const userInput = document.getElementById("userInput");
+userInput.innerHTML = '';
 
+for (let key of arr) {
+    const btn = document.createElement("button");
+    btn.textContent = key;
+    btn.classList.add('btns');
+    btn.value = key;
+    keysContainer.appendChild(btn);
+}
+
+
+const btns = document.querySelectorAll("button");
+btns.forEach(btn => {
+    btn.addEventListener("click", insert);
+});
+
+function insert(e) {
+    const val = e.target.value;
+
+      if (val === 'AC') {
+        userInput.value = '';
+      } else if (val === '=') {
+        try {
+          userInput.value = eval(userInput.value.replace(/x/g, '*'));
+        } catch {
+          userInput.value = 'Error';
+        }
+      } else {
+        userInput.value += val;
+      }
+   
+}
+
+    </script>
+</body>
+</html>
