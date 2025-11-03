@@ -1,0 +1,71 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb; /* subtle gray background */
+}
+
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Gray button */
+.btn1 {
+  background-color: #4B4B4B;
+}
+.btn1:hover {
+  background-color: #6B7280;
+}
+
+/* Primary button */
+.btn2 {
+  background-color: #3B82F6;
+}
+.btn2:hover {
+  background-color: #2563EB;
+}
+
+/* Game box styling */
+.gameBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 90%;
+}
+
+#word{
+    font-weight: 900;
+    font-size:2rem;
+}
+
+.win{
+  color:green;
+}
+
+.loose{
+  color:red;
+}
