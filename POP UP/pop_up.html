@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP UP</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .container{
+        background-color:rgb(68, 33, 33);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .submit{
+        padding:0.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+    }
 
+    .card{
+        position: absolute;
+        left:50%;
+        top:0;
+        transform: translate(-50%,-50%) scale(0.1);
+        background-color: #ffffff;
+        text-align: center;
+        width:350px;
+        height: 200px;
+        max-height: 210px;
+        max-width:360px;
+        visibility: hidden;
+    }
+    .open-card{
+        top:50%;
+        transform: translate(-50%,-50%);
+        visibility: visible;
+    }
+    .ok{
+        margin-top:1.2rem;
+        padding:0.3rem;
+        font-size:1.1rem;
+        width:80%;
+        background-color: #43be4f;
+        border: none;
+        color:#ffffff;
+    }
+    .bold{
+        font-weight: 700;
+    }
+    .tick{
+        margin-top: 0.5rem;
+    }
+</style>
+<body>
+    <div class="container">
+        <button type="submit" class="submit" onclick="openPopUp()">Submit</button>
+        <div class="card" id="popup">
+            <img src="tick.png" alt="tick" class="tick">
+            <p class="description"><span class="bold">Success! </span>We have received your details.</p>
+            <button class="ok" onclick="closePopUp()">ok</button>
+        </div>
+    </div>
+    <script>
+        const popup=document.getElementById("popup");
+        function openPopUp(){
+            popup.classList.add("open-card");
+        }
+        function closePopUp(){
+            popup.classList.remove("open-card");
+        }
+    </script>
+</body>
+</html>
